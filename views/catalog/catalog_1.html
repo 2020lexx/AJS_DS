@@ -1,0 +1,26 @@
+<div class="catalog wrapper wrapper-content animated fadeInRight no-margins no-padding" >
+    <div class="row h100" ng-controller="CatalogCtrl as Catalog">
+         <div class="col-lg-12" id="catalog_home"   >
+           <div class="catalog_slide" id="catalog_0"></div>
+            <div class="catalog_slide" id="catalog_1"></div>
+            <div class="catalog_slide" id="catalog_2"></div>
+  		 </div>
+   		<div class="col-lg-12" id="catalog_single_prod" onClick="angular.element('#catalog_single_prod').scope().close_single_prod()" >
+   			<div class="col-lg-6" id="catalog_single_prod_map" >
+   		 		</div>
+   			<div id="catalog_single_prod_img" class="col-lg-6"  onClick="angular.element('+cat_id+"_"+elem_cat.prod_id+').scope().select(\''+cat_id+","+elem_cat.prod_id+'\')">
+   			   <img id="single_product_img" src='' />
+   				<div class="row" id="single_product_code"></div>
+   				<div class="row">
+   					<div class="col-lg-3" id="single_product_qr"></div>
+   					<p>Invia la mappa al tuo cellulare</p><p>Fai una scansione del QR Code</p>
+   				</div>
+   				<!--
+   					<div class="col-lg-3" id="single_product_new_cost_prd"></div>
+   					<div class="col-lg-3" id="single_product_old_cost_prd"></div>
+   					<div class="col-lg-3" id="single_product_end_prom"></div>
+   		 	    </div>-->
+   		</div>
+        </div>
+</div> 
+</div> 

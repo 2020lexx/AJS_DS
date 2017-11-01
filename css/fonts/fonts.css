@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Lovers Quarrel';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.eot');
+  src: url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.eot?#iefix') format('embedded-opentype'),
+       local('Lovers Quarrel'),
+       local('Lovers-Quarrel-regular'),
+       url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.woff2') format('woff2'),
+       url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.woff') format('woff'),
+       url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.ttf') format('truetype'),
+       url('/fonts/Lovers-Quarrel-regular/Lovers-Quarrel-regular.svg#LoversQuarrel') format('svg');
+}
+

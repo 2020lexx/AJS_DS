@@ -1,0 +1,70 @@
+<div claas="row no-margins no-padding"   ng-controller="MenuCtrl as Menu" >
+<div class="row no-padding no-margins"  >
+    
+         <div  id="top-controls" class="pull-right m-r-lg" >
+        </div> 
+ 
+   
+</div>
+<div id="restaurant_menu" class="wrapper wrapper-content animated fadeInRight no-margins no-padding" >
+      <img id="restaurant_title" src="views/menu/imgs/logo.png" />
+      <div class="row">
+        <div class="col-lg-12  ">
+                 <h1 class="m-l-xl m-t-xl" style="text-align: center">
+                    Menu
+                </h1>
+           
+           
+        </div>
+    </div>
+    <div class="row m-l""> 
+        <div class="col-lg-4" >
+             <table class="table table-hover no-margins" ng-model="menu_data" >
+                    <thead>
+                    
+                    </thead>
+                    <tbody>
+                    <tr class="cat_item" ng-repeat="list_cat in menu_data" ng-click="catList(list_cat.id)" >
+                         <td > {{list_cat.name}} <img src="views/menu/imgs/{{list_cat.img_bg}}" /></td>
+                         
+                       
+                    </tr>
+                    
+                    </tbody>
+                </table> 
+         </div>  
+         <img class="restaurant_bg" src="views/menu/imgs/main.png" />
+
+          <div class="col-lg-8 item_ani" ng-show="!showSingleProduct" >
+            <table class="table table-hover no-margins" ng-model="list_data">
+                    <thead>
+                    
+                    </thead>
+                    <tbody>
+                    <tr  class="list_item" ng-repeat="list_items in list_data" ng-click="singleProd(list_items)" >
+                         <td >  {{list_items.name}}<p>{{list_items.desc}} </p></td>
+                         
+                       
+                    </tr>
+                    
+                    </tbody>
+                </table>
+               
+        </div>
+          <div class="col-lg-8 prod_item" ng-show="showSingleProduct"    ng-click="singleProdClose()" >
+              <img class="restaurant_prd_bg "  src="views/menu/imgs/main2.png" />
+            <h2>{{single_product.name}}</h2> 
+            <h3>{{single_product.desc}}</h3>
+                 <img class="restaurant_prd_ln "  src="views/menu/imgs/line.png" />
+      
+            <h4><p>{{single_product.desc_1}}</p><p>{{single_product.desc_2}}</p></h4>
+          <div class="col-lg-6 item_ani single_product_list" >
+            <h4><p>{{single_product.list_title}}</p><p>{{single_product.list}}</p></h4>
+
+          </div>
+          <div class="col-lg-6 item_ani single_product_cost" >
+            <h3>€{{single_product.prezzo}}</h3>
+          </div>
+       </div>
+       
+</div>

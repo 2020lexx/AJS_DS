@@ -1,0 +1,700 @@
+/*
+ *
+ * Copyright (c) 2017. @pablo
+ *
+ * Test Code
+ */
+
+
+
+ // Global Vars
+ // reponse var call as: d_top_controls.v_top_controls
+ // update var data call as: d_top_controls.update(value)
+ function viewport_var(){
+ 	viewport_var ='';
+ 	return {
+	 	viewport_var ,						 
+	 		update: function(v_viewport_var){	 
+	 			this.v_viewport_var  = v_viewport_var;
+ 		}
+ 	}
+ }
+ function d_top_controls(){
+ 	v_top_controls = '';
+ 	return {  		
+ 		v_top_controls ,					// reponse var call as: d_top_controls.v_top_controls
+ 		update: function(v_top_controls){	// update var data call as: d_top_controls.update(value)
+ 			this.v_top_controls  = v_top_controls;
+ 		}
+ 	}
+}
+function web_site_data(){
+	var web_site_data = { 
+						id:0,
+						site:'http://www.google.it',
+					 };
+	return {
+		web_site_data
+	}
+}
+function slides_data(){
+
+	var slides_data = [{ slide_id:'slide1',
+						  slide_name:'slide1',
+	 					  slide_code:'<div class="txt5">BMW - M5</div><div class="txt6">SUPERIORE SOTTO OGNI PUNTO DI VISTA.</div>',
+					  	  css_code:'{}',
+					  	  bg_src:'bg1.jpg',
+					  	  tr_ani_id:1,
+					  	  bg_ani_id:1,
+					  	  txt_ani_id:5,
+	      				  std_time:8 },
+	      				{ slide_id:'slide2',
+	      				  slide_name:'slide2',
+	 					  slide_code:'<div class="txt1">Mac</div><div class="txt2">Più leggero della luce</div>',
+	      				  css_code:'{}',
+	      				  bg_src:'bg2.jpg',
+					  	  tr_ani_id:1,
+					  	  bg_ani_id:2,
+					  	  txt_ani_id:3,
+	      				  std_time:8 },
+	      				{ slide_id:'slide3',
+	      				  slide_name:'slide3',
+	 					  slide_code:'<img class="img1" src="views/slides/slides/slide3/sun.png" /> <div class="txt1">New Sunshine Resort</div><div class="txt2">Ospitalità 4 Stelle</div>',
+	      				  css_code:'#slide3 .img1{position:absolute;margin-left:10%;margin-top:28%;}',
+	      				  bg_src:'bg3.jpg',
+					  	  tr_ani_id:1,
+					      bg_ani_id:0,
+					  	  txt_ani_id:2,
+	      				  std_time:11 },
+	      				{ slide_id:'slide4',
+	      				  slide_name:'slide4',
+	 					  slide_code:'<div class="txt1">L\'autentica cucina giapponese</div><div class="txt2">Tutta la sua purezza, senza compromessi.</div>  <div class="txt3"><ul><li>Sushi</li><li>Sukiyaki</li><li>Tenpura</li></ul></div><img class="img3" src="views/slides/slides/slide4/sushi.jpg"></div>',
+					  	  css_code:'#slide4 .img3 { position:absolute; margin-left:70%; } #slide4 .txt3,#slide4 .txt4{ margin-left:5%;font-size:30px;}',
+					  	  bg_src:'bg4.jpg',
+					  	  tr_ani_id:1,
+					  	  bg_ani_id:2,
+					  	  txt_ani_id:4,
+	      				  std_time:18 }];
+
+	     return {
+	     	slides_data 
+	     }
+
+}
+function catalog_data(){
+
+	// main data
+		var catalog_data = [{ cat_id:'catalog_0',
+							  data:[{prod_id: 'prod0',
+								  img_sl:'prod0_sl.jpg',
+								  code_sl:'<div class="txt1">Fragole</div><div class="txt2">Agricoltora Biologica</div>',
+								  css_sl:'',
+								  img_prd:'prod0_prd.jpg',
+								  code_prd:'<div class="txt1">Fragole</div><div class="txt2">Varietà di fragola rifiorente più saporita attualmente sul mercato, calibro medio, colore brillante</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L440 530 L440 200" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="440" cy="200" r="10" />   </svg>',
+								  qr_data:'qr_0'
+								  },
+								  { prod_id: 'prod1',
+								  img_sl:'prod1_sl.jpg',
+								  code_sl:'<div class="txt1">Uva Bianca</div><div class="txt2">Varietà Isabella - Regina</div>',
+								  css_sl:'',
+								  img_prd:'prod1_prd.jpg',
+								  code_prd:'<div class="txt1">Uva Bianca</div><div class="txt2"> Vendita uva da vino Trebbiano e Montepulciano vendemmia 2016</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L290 530 L290 400" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="290" cy="400" r="10" />   </svg>',
+								  qr_data:'qr_1'
+								  },
+								  { prod_id: 'prod2',
+								  img_sl:'prod2_sl.jpg',
+								  code_sl:'<div class="txt1">Caffè in Grani</div><div class="txt2">Ottimo rapporto qualità/prezzo  </div>',
+								  css_sl:'',
+								  img_prd:'prod2_prd.jpg',
+								  code_prd:'<div class="txt1">Caffè in Grani</div><div class="txt2">In tre diverse varietà: tostatura forte, media e media per decaffeinato</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_2'
+								  },
+								  { prod_id: 'prod3',
+								  img_sl:'prod3_sl.jpg',
+								  code_sl:'<div class="txt1">Mele</div><div class="txt2">Direttamente dalle mani del produttore alle tue</div>',
+								  css_sl:'',
+								  img_prd:'prod3_prd.jpg',
+								  code_prd:'<div class="txt1">Mele</div><div class="txt2">Direttamente dalle mani del produttore alle tue</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3" id="svg_circle"  fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_3'
+								  },
+								  { prod_id: 'prod4',
+								  img_sl:'prod4_sl.jpg',
+								  code_sl:'<div class="txt1">Ananas</div><div class="txt2">Frutta fresca certificata Fairtrade </div>',
+								  css_sl:'',
+								  img_prd:'prod4_prd.jpg',
+								  code_prd:'<div class="txt1">Ananas</div><div class="txt2">Origine Costa Rica</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L180 530 L180 305 L140 305" />   <circle id="svg_circle" stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="140" cy="305" r="10" />   </svg>',
+								  qr_data:'qr_4'
+								  }],
+							},
+							{ cat_id:'catalog_1',
+						  	  data:[{prod_id: 'prod0',
+								  img_sl:'prod0_sl.jpg',
+								  code_sl:'<div class="txt1">Wurstel di pollo</div><div class="txt2">Tutti fatti a regola d\'arte</div>',
+								  css_sl:'',
+								  img_prd:'prod0_prd.jpg',
+								  code_prd:'<div class="txt1">Wurstel di pollo</div><div class="txt2">Con carne di pollo e tacchino nati e allevati 100% in Italia</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L440 530 L440 200" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="440" cy="200" r="10" />   </svg>',
+								  qr_data:'qr_0'
+								  },
+								  { prod_id: 'prod1',
+								  img_sl:'prod1_sl.jpg',
+								  code_sl:'<div class="txt1">Pane</div><div class="txt2">Con Lievito Naturale</div>',
+								  css_sl:'',
+								  img_prd:'prod1_prd.jpg',
+								  code_prd:'<div class="txt1">Pane</div><div class="txt2">Sempre pronti e croccanti. </div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L290 530 L290 400" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="290" cy="400" r="10" />   </svg>',
+								  qr_data:'qr_1'
+								  },
+								  { prod_id: 'prod2',
+								  img_sl:'prod2_sl.jpg',
+								  code_sl:'<div class="txt1">Emmental</div><div class="txt2">Benvenuti dal re dei formaggi! </div>',
+								  css_sl:'',
+								  img_prd:'prod2_prd.jpg',
+								  code_prd:'<div class="txt1">Emmental</div><div class="txt2">Stagionatura di almeno 4 mesi</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_2'
+								  },
+								  { prod_id: 'prod3',
+								  img_sl:'prod3_sl.jpg',
+								  code_sl:'<div class="txt1">Mt Tam</div><div class="txt2">From Northern California landmark</div>',
+								  css_sl:'',
+								  img_prd:'prod3_prd.jpg',
+								  code_prd:'<div class="txt1">Mt Tam</div><div class="txt2">Elegante di crema tripla</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3" id="svg_circle"  fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_3'
+								  },
+								  { prod_id: 'prod4',
+								  img_sl:'prod4_sl.jpg',
+								  code_sl:'<div class="txt1">Salame Felino IGP</div><div class="txt2">Dolce e irresistibile</div>',
+								  css_sl:'',
+								  img_prd:'prod4_prd.jpg',
+								  code_prd:'<div class="txt1">Salame Felino</div><div class="txt2">Preparato con pura carne di suino, accuratamente selezionatat</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L180 530 L180 305 L140 305" />   <circle id="svg_circle" stroke="red" id="svg_circle" stroke-width="3"  fill="red" cx="140" cy="305" r="10" />   </svg>',
+								  qr_data:'qr_4'
+								  }],
+							},{ cat_id:'catalog_2',
+							  data:[{prod_id: 'prod0',
+								  img_sl:'prod0_sl.jpg',
+								  code_sl:'<div class="txt1">Collezioni uniche di Champagne </div><div class="txt2">Bottiglie per apprezzare la qualità .</div>',
+								  css_sl:'',
+								  img_prd:'prod0_prd.jpg',
+								  code_prd:'<div class="txt1">Le migliori bollicine</div><div class="txt2">Per ogni giorno o per le grandi occasioni</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L440 530 L440 200" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="440" cy="200" r="10" />   </svg>',
+								  qr_data:'qr_0'
+								  },
+								  { prod_id: 'prod1',
+								  img_sl:'prod1_sl.jpg',
+								  code_sl:'<div class="txt1">Birre di Classe</div><div class="txt2">Nazionali e dall\'estero</div>',
+								  css_sl:'',
+								  img_prd:'prod1_prd.jpg',
+								  code_prd:'<div class="txt1">Birre di Classe</div><div class="txt2">Per proporre l\'arte della birra</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  end_prom:'21/3/16',
+								  qr_data:'qr_1'
+								  },
+								  { prod_id: 'prod2',
+								  img_sl:'prod2_sl.jpg',
+								  code_sl:'<div class="txt1">Cocktails e Aperitivi</div><div class="txt2">L\'ora dell\'aperitivo</div>',
+								  css_sl:'',
+								  img_prd:'prod2_prd.jpg',
+								  code_prd:'<div class="txt1">Cocktails e Aperitivi</div><div class="txt2">Tante idee per i tuoi aperitivi sfiziosi e originali.</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_2'
+								  },
+								  { prod_id: 'prod3',
+								  img_sl:'prod3_sl.jpg',
+								  code_sl:'<div class="txt1">World of Whisky</div><div class="txt2">Ogni genere di whisky, blend inclusi</div>',
+								  css_sl:'',
+								  img_prd:'prod3_prd.jpg',
+								  code_prd:'<div class="txt1">World of Whisky</div><div class="txt2">I triple malt whisky</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L550 530 L550 93 L600 93" />   <circle stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="600" cy="93" r="10" />   </svg>',
+								  qr_data:'qr_3'
+								  },
+								  { prod_id: 'prod4',
+								  img_sl:'prod4_sl.jpg',
+								  code_sl:'<div class="txt1">Vini pregiati italian</div><div class="txt2">Il 40% circa di tutta la produzione italiana è a Doc e a Docg, un terzo è a Igt</div>',
+								  css_sl:'',
+								  img_prd:'prod4_prd.jpg',
+								  code_prd:'<div class="txt1">Vini italiani famosi nel mondo</div><div class="txt2">Vini Italiani divisi per regione</div>',
+								  css_prd:'',
+								  old_cost_prd:'20',
+								  new_cost_prd:'15',
+								  end_prom:'21/3/16',
+								  svg_path:'<svg height="700" width="700">  <path id="svg1" stroke="red"  stroke-width="3" fill="none" d="M220 635 L220 530 L180 530 L180 305 L140 305" />   <circle id="svg_circle" stroke="red" stroke-width="3"  id="svg_circle" fill="red" cx="140" cy="305" r="10" />   </svg>',
+								  qr_data:'qr_4'
+								  }],
+							}];
+	return{
+		catalog_data 
+	}
+
+}
+function main_menu_data(){
+	main_menu_data = { 
+						id:0,
+						video:'bokeh1.mp4',
+					 };
+	return {
+		main_menu_data
+	}
+}
+function menu_data(){
+	menu_data = [
+						{ id:0,
+						  cat_id:1,
+						  name:'Antipasti',
+						  desc:'Gli Antipasti',
+						  desc_1:'',
+						  img_bg:'gambero.png',
+						  img_main:'',
+						  data:[{
+						  	id:0,
+						  	name:'Prosciutto di Parma e pane di Altamura',
+						  	desc:'Parma ham and Altamura bread',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Prosciutto, Pane Altamura',
+						  	prezzo:'15.00',
+						  },{
+						  	id:1,
+						  	name:'Sarde in saor e mela verde e Baccalà mantecato con chips di polenta al caffé',
+						  	desc:'Sweet and sour sardines with green apple and Cod fish patè with dry chips of polenta with a hint of coffee',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Sarde, Mela Verde, Baccalà',
+						  	prezzo:'16.00',
+						  },{
+						  	id:2,
+						  	name:'Pollo e gambero con spuma al curry, ceci e germoglio d’aglio',
+						  	desc:'Chicken and shrimp with curried foam and chickpeas and garlic sprouts',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Pollo, Gambero, Ceci',
+						  	prezzo:'16.00',
+						  },{
+						  	id:3,
+						  	name:'Battuta di manzetta veneta con tartufo scorzone e uovo di quaglia',
+						  	desc:'Italian beef tartare with black truffle and quail’s egg',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Tartufo, Uovo di Quaglia',
+						  	prezzo:'19.00',
+						  },{
+						  	id:4,
+						  	name:'Crema di patate al tartufo scorzone con capesante alla liquirizia e caviale di olive nere',
+						  	desc:'Cream of potatoes with black truffle with scallops flavoured with liquorice served with black olives caviar',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Tartufo, Capesante',
+						  	prezzo:'19.00',
+						  },{
+						  	id:5,
+						  	name:'Doppia tartar Tonno rosso pinna gialla con crema al wasabi e miele, Dentice con barbabietole in agrodolce e caprino',
+						  	desc:'Tartare of yellowfin tuna with wasabi and honey, Sea bream dentex with sweet and sour beetroot and caprino cheese',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Tonno Rosso Pina Gialla',
+						  	prezzo:'22.00',
+						  },{
+						  	id:6,
+						  	name:'Astice allo zenzero su zuppa di lenticchie e topinambour',
+						  	desc:'Lobster with ginger on a lentil and jerusalem artichoke soup',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Astice',
+						  	prezzo:'22.00',
+						  },{
+						  	id:7,
+						  	name:'Antipasto misto di pesce crudo',
+						  	desc:'A starter of the chef’s choice of raw fish',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Ostriche, Cozze, Gamberi',
+						  	prezzo:'28.00',
+						  },{
+						  	id:8,
+						  	name:'Antipasto misto di pesce cotto',
+						  	desc:'A starter of the chef’s choice of cooked fish',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'L\'antipasto creato per fornivi una esperienza unica',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Ostriche, Cozze, Gamberi',
+						  	prezzo:'28.00',
+						  }]
+						},
+						{ id:1,
+						  cat_id:1,
+						  name:'Primi piatti',
+						  desc:'Primi piatti',
+						  desc_1:'',
+						  img_bg:'primi.png',
+						  img_main:'',
+						  data:[{
+						  	id:0,
+						  	name:'Spaghetti alle verdure d’inverno',
+						  	desc:'Spaghetti with winter vegetables',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Pasta Speciale Ingredienti Genuini',
+						  	list:'Spaghetti',
+						  	prezzo:'13.00',
+						  },{
+						  	id:1,
+						  	name:'Linguine di gragnano agli scampi, pomodoro e acqua di basilico',
+						  	desc:'Gragnano durum wheat linguine with scampi, tomato and basil water',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Pasta Speciale Ingredienti Genuini',
+						  	list:'Linguine',
+						  	prezzo:'16.00'
+						  },{
+						  	id:2,
+						  	name:'Ravioli di lepre con crema di formaggio schiera e frutti di bosco',
+						  	desc:'Pumpkin and ricotta raviolo with lobster and spinach',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Pasta Speciale Ingredienti Genuini',
+						  	list:'Ravioli',
+						  	prezzo:'22.00',
+						  },{
+						  	id:3,
+						  	name:'Bigoli affumicati con gamberi, topinambour e melograno',
+						  	desc:'Smoked bigoli pasta with shrimps, jerusalem artichoke and pomegranate',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Pasta Speciale ',
+						  	list:'Bigoli',
+						  	prezzo:'22.00'
+						  },{
+						  	id:4,
+						  	name:'Zuppa di crostacei e pescato lagunare',
+						  	desc:'Seafood chowder with fresh lagoon fish of the day',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Crostacei, Pescato Lagunare',
+						  	prezzo:'22.00',
+						  },{
+						  	id:5,
+						  	name:'Vellutata di cipolle dolci e foie gras',
+						  	desc:'Pureed sweet onions and foie gras',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'',
+						  	list:'Foie Gras',
+						  	prezzo:'22.00'
+						  }]
+						},{ 
+						  id:2,
+						  cat_id:2,
+						  name:'Secondi piatti',
+						  desc:'Secondi piatti',
+						  desc_1:'',
+						  img_bg:'secondi.png',
+						  img_main:'',
+						  data:[{
+						  	id:0,
+						  	name:'Guancetta di vitello al valpolicella con zoccolo di polenta dolce e salsa di cavolfiore',
+						  	desc:'Veal cheek cooked inValpolicella wine served with sweet polenta and cauliflower sauce',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Vitello',
+						  	prezzo:'24.00',
+						  },{
+						  	id:1,
+						  	name:'Filetto di manzo italiano allo zenzero con il suo jus e radicchio',
+						  	desc:'Fillet of italian beef with ginger gravy and local chicory',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Manzo',
+						  	prezzo:'28.50'
+						  },{
+						  	id:2,
+						  	name:'Petto d’anatra con crema di verza e cavolo cappuccio rosso',
+						  	desc:'Duck breast with creamed green cabbage and red cabbage',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Anatra',
+						  	prezzo:'26.00',
+						  },{
+						  	id:3,
+						  	name:'Trancio di ricciola marinata al caffè e cioccolato con crema di sedano rapa indivia belga e castagne',
+						  	desc:'Fillet of greater amberjack marinated with coffee and chocolate in a celery and turnip cream with belgian endive salad and chestnut',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Ricciola',
+						  	prezzo:'28.50'
+						  },{
+						  	id:4,
+						  	name:'Filettino di tonno tataky spuma di polenta dolce e soia con pop corn di maiale',
+						  	desc:'Fillet of tuna tataky with a soya and sweet polenta foam and pork crackling',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Tonno Tataky',
+						  	prezzo:'28.50',
+						  },{
+						  	id:5,
+						  	name:'Coda di rospo in avocado su letto di barbabietola e crema mediterranea',
+						  	desc:'Monkfish on avocado served with a beetroot and mediterranean cream',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Rospo',
+						  	prezzo:'28.50'
+						  },{
+						  	id:6,
+						  	name:'Branzino fumè con crema di zucca, spinacio e uova di salmone',
+						  	desc:'Smoked sea bass with pumpkin cream, spinach and salmon roe',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'Branzino',
+						  	prezzo:'28.50'
+						  },{
+						  	id:7,
+						  	name:'Fritto dell’Adriatico in tempura con verdurine ',
+						  	desc:'Mix of fried sea food (scampi, prawns, rings of squid ) and vegetables deep fried in a tempura batter',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'',
+						  	list:'',
+						  	prezzo:'30.50'
+						  }]
+						},{ 
+						  id:3,
+						  cat_id:3,
+						  name:'Dolci',
+						  desc:'Dolci',
+						  desc_1:'',
+						  img_bg:'dolce.png',
+						  img_main:'',
+						  data:[{
+						  	id:0,
+						  	name:'Tiramisù',
+						  	desc:'',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'',
+						  	prezzo:'9.00',
+						  },{
+						  	id:1,
+						  	name:'Mousse di pistacchio di bronte e caramello',
+						  	desc:'Mousse made with sicilian bronte pistachios and caramel',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'',
+						  	list:'',
+						  	prezzo:'9.50'
+						  },{
+						  	id:2,
+						  	name:'Meringa di mela su croccante di castagna ed arancia',
+						  	desc:'Apple meringue on a chestnut and orange crunch',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'',
+						  	prezzo:'9.00',
+						  },{
+						  	id:3,
+						  	name:'Selezione di praline e cioccolato',
+						  	desc:'Selection of chocolate pralines',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'',
+						  	list:'',
+						  	prezzo:'12.50'
+						  },{
+						  	id:4,
+						  	name:'Sorbetto al cucchiaio al limone, menta e basilico',
+						  	desc:'Lemon sorbet with fresh mint and basil',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'Ingredienti Genuini',
+						  	list:'',
+						  	prezzo:'9.50',
+						  },{
+						  	id:5,
+						  	name:'Selezione di formaggi e confetture',
+						  	desc:'Sampling of cheese and conserves',
+						  	img_bg:'',
+						  	img_main:'',
+						  	imgs:'',
+						  	desc_1:'',
+						  	desc_2:'Composto dai piu\' pregatti ingredienti...',
+						  	list_title:'',
+						  	list:'',
+						  	prezzo:'18.50'
+						  }]
+						}];
+	return{
+		menu_data
+	}
+}
+
+ angular
+    .module('zx_ds')
+    .factory('d_top_controls',d_top_controls)
+    .factory('main_menu_data',main_menu_data)
+    .factory('menu_data',menu_data)
+    .factory('catalog_data',catalog_data)
+    .factory('slides_data',slides_data)
+    .factory('web_site_data',web_site_data)
+    .factory('viewport_var',viewport_var)
